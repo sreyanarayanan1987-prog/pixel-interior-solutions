@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap");
+
+@theme {
+  --color-brand-ink: #20211d;
+  --color-brand-green-950: #20211d;
+  --color-brand-green-900: #30342b;
+  --color-brand-green-800: #43483c;
+  --color-brand-green-700: #5f6658;
+  --color-brand-green-600: #777e6c;
+  --color-brand-gold-700: #8d754f;
+  --color-brand-gold-600: #ad936b;
+  --color-brand-gold-500: #c9af87;
+  --color-brand-gold-400: #e0cfb5;
+  --color-brand-cream: #eeece5;
+  --color-brand-cream-dark: #dedbd0;
+  --color-brand-text-light: #67685f;
+  --color-neutral-50: #fbfaf7;
+  --color-neutral-100: #f3f1eb;
+  --color-neutral-200: #e5e2d9;
+  --color-neutral-300: #d3d0c6;
+  --color-neutral-400: #aaa9a0;
+  --color-neutral-500: #85857d;
+  --color-neutral-600: #64645d;
+  --color-neutral-700: #454640;
+  --color-neutral-800: #2f302c;
+  --color-neutral-900: #20211d;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+}
+
+html { scroll-behavior: smooth; background: var(--color-brand-cream); }
+body { font-family: var(--font-sans); color: var(--color-brand-ink); background: var(--color-brand-cream); line-height: 1.45; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 500; letter-spacing: -.055em; }
+::selection { background: var(--color-brand-ink); color: var(--color-brand-cream); }
+* { border-color: color-mix(in srgb, var(--color-brand-ink) 12%, transparent); }
+
+.editorial-label { font-family: var(--font-mono); font-size: .65rem; font-weight: 500; letter-spacing: .16em; line-height: 1.3; text-transform: uppercase; }
+.editorial-rule { height: 1px; background: currentColor; opacity: .32; }
+.grain { position: relative; }
+.grain::after { content: ""; pointer-events: none; position: absolute; inset: 0; z-index: 1; opacity: .14; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E"); mix-blend-mode: soft-light; }
+.image-frame { overflow: hidden; background: #d6d2c8; }
+.image-frame img { transition: transform 1.2s cubic-bezier(.22,1,.36,1); }
+.image-frame:hover img { transform: scale(1.04); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
