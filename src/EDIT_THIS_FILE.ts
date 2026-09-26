@@ -41,8 +41,8 @@ export const contactInfo: ContactInfo = {
   whatsappUrl:
     "https://wa.me/916238503639?text=Hi%20Pixel%20Interior%20Solutions%2C%20I%27d%20like%20to%20know%20more%20about%20your%20interior%20design%20services.",
   socials: {
-    instagram: "#",
-    facebook: "#",
+    instagram: "https://www.instagram.com/pixel_interior_solutions?stkn=MTlrc3N3aTYwMmgwNw==",
+    facebook: "https://www.facebook.com/share/1Etze6gPHo/",
     pinterest: "#",
   },
 };
