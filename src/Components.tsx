@@ -663,7 +663,7 @@ export function Header() {
           className={`group flex flex-col leading-none transition-colors ${scrolled ? "text-brand-ink" : "text-white"}`}
           onClick={() => setMenuOpen(false)}
         >
-          <img src="/logo.png" alt="Pixel Interior Solutions" className="h-12 w-auto object-contain" />
+          <img src="/images/logo.png" alt="Pixel Interior Solutions" className="h-12 w-auto object-contain" />
         </RouterNavLink>
 
         {/* Desktop Navigation */}
