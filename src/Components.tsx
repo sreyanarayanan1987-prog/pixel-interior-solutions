@@ -513,7 +513,7 @@ export function Footer() {
         <div className="flex flex-col gap-6">
           <div>
             <img
-              src="/images/logo-dark.jpg"
+              src="/images/logo.png"
               alt="Pixel Interior Solutions"
               className="h-24 w-auto rounded-sm object-contain"
             />
