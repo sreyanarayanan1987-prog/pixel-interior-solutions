@@ -56,7 +56,8 @@ export function About() {
 Founded in 2022 in Nalleppilly, Palakkad, Pixel Interiors began its journey on a small scale with a strong vision to transform ordinary spaces into beautiful and functional living environments. Today, we are proud to be growing across Kerala and Tamil Nadu, delivering innovative interior solutions that reflect our commitment to quality, creativity, and customer satisfaction
                 </p>
                 <p className="text-lg leading-relaxed text-brand-text-light">
-                  Every project is an opportunity to transform a space into something meaningful. We approach each with the same rigor, creativity, and attention to detailâ€”regardless of size or budget.
+                 Our Commitment to Quality and Timely Delivery
+At Pixel Interiors, we understand that every project represents a dream, an investment, and a vision for the future. One of our greatest strengths is our commitment to completing every project within the promised timeframe without compromising on quality. With a dedicated team of over 40 skilled and responsible professionals, we work with passion, precision, and professionalism to turn our customers’ ideas into reality.
                 </p>
               </div>
             </div>
