@@ -1,4 +1,4 @@
-﻿/* The five website pages live together here. */
+/* The five website pages live together here. */
 import { CheckCircle2, ChevronLeft, ChevronRight, Mail, MapPin, Phone, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -92,50 +92,50 @@ At Pixel Interiors, we understand that every project represents a dream, an inve
               Our Services
               </h2>
               <p className="text-lg text-brand-text-light">
-We offer a comprehensive range of interior solutions for residential and commercial spaces, tailored to suit your lifestyle, preferences, and budget.
-<ul>
-  Our major services include:
+                  We offer a comprehensive range of interior solutions for residential and commercial spaces, tailored to suit your lifestyle, preferences, and budget.
+                  <ul>
+                    Our major services include:
 
-<li>- Bedroom Wardrobes</li>
-  <li>- Bedroom Furniture Sets</li>
-  <li>- TV Units and Stands</li>
-  <li>- Pooja Units</li>
-  <li>- Loft Works</li>
-  <li>- Kitchen Base Units and Wall-Mounted Units</li>
-  <li>- Kitchen Accessories and Fittings</li>
-  <li>- Office Interiors</li>
-  <li>- Reception Tables and Counters</li>
+                    <li>- Bedroom Wardrobes</li>
+                    <li>- Bedroom Furniture Sets</li>
+                    <li>- TV Units and Stands</li>
+                    <li>- Pooja Units</li>
+                    <li>- Loft Works</li>
+                    <li>- Kitchen Base Units and Wall-Mounted Units</li>
+                    <li>- Kitchen Accessories and Fittings</li>
+                    <li>- Office Interiors</li>
+                    <li>- Reception Tables and Counters</li>
 
-</ul>
+                  </ul>
 
 
-From modern kitchens and elegant bedrooms to functional office spaces, we focus on creating interiors that combine style, comfort, durability, and practicality.
+                  From modern kitchens and elegant bedrooms to functional office spaces, we focus on creating interiors that combine style, comfort, durability, and practicality.
 
-Innovation and Modern Technology
+                  Innovation and Modern Technology
 
-The interior industry is constantly evolving, and at Pixel Interiors, we believe in staying ahead of the curve. We continuously update our knowledge, embrace the latest design trends, explore modern materials, and adopt advanced technologies to deliver innovative interior solutions.
+                  The interior industry is constantly evolving, and at Pixel Interiors, we believe in staying ahead of the curve. We continuously update our knowledge, embrace the latest design trends, explore modern materials, and adopt advanced technologies to deliver innovative interior solutions.
 
-Our team is committed to bringing fresh ideas and contemporary concepts into every project. By combining creativity, technical expertise, and modern techniques, we aim to provide interior solutions that meet today's standards and tomorrow's expectations.
+                  Our team is committed to bringing fresh ideas and contemporary concepts into every project. By combining creativity, technical expertise, and modern techniques, we aim to provide interior solutions that meet today's standards and tomorrow's expectations.
             
-                
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-green-900 mb-6">
-             Why Choose Pixel Interiors?
-            </h2>
-  <ul>             
-<li>- Experience and Growth: Growing steadily since 2022 across Kerala and Tamil Nadu.</li>
-<li>- Dedicated Team: More than 40 committed professionals working towards your satisfaction.</li>
-<li>- On-Time Completion: A strong commitment to completing projects within the promised deadlines.</li>
-<li>- Budget-Friendly Solutions: Beautiful and practical interiors designed around your budget.</li>
-<li>- Modern Designs: Innovative concepts, contemporary styles, and the latest technologies.</li>
-<li>- Customer Satisfaction: Your ideas, requirements, and satisfaction are at the heart of everything we do.</li>
-</ul> 
-Your Vision, Our Commitment
+                      
+                  <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-green-900 mb-6">
+                     Why Choose Pixel Interiors?
+                  </h2>
+                      <ul>             
+                    <li>- Experience and Growth: Growing steadily since 2022 across Kerala and Tamil Nadu.</li>
+                    <li>- Dedicated Team: More than 40 committed professionals working towards your satisfaction.</li>
+                    <li>- On-Time Completion: A strong commitment to completing projects within the promised deadlines.</li>
+                    <li>- Budget-Friendly Solutions: Beautiful and practical interiors designed around your budget.</li>
+                    <li>- Modern Designs: Innovative concepts, contemporary styles, and the latest technologies.</li>
+                    <li>- Customer Satisfaction: Your ideas, requirements, and satisfaction are at the heart of everything we do.</li>
+                    </ul> 
+                    Your Vision, Our Commitment
 
-At Pixel Interiors, we do more than create interiors — we help bring your dreams to life. Whether you are planning a new home, upgrading your existing space, or designing a modern office, we are here to guide you at every step.
+                    At Pixel Interiors, we do more than create interiors — we help bring your dreams to life. Whether you are planning a new home, upgrading your existing space, or designing a modern office, we are here to guide you at every step.
 
-Let us transform your ideas into spaces that inspire, comfort, and impress.
+                    Let us transform your ideas into spaces that inspire, comfort, and impress.
 
-Pixel Interiors – Your Dreams. Our Design. Our Commitment.
+                    Pixel Interiors – Your Dreams. Our Design. Our Commitment.
               </p>
             </div>
           </Reveal>
@@ -151,6 +151,24 @@ Pixel Interiors – Your Dreams. Our Design. Our Commitment.
       
             ))}
           </div>
+             <div className="max-w-none">
+              <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-green-900 mb-6">
+                Our Expansion in Tamil Nadu
+
+              </h2>
+              <p className="text-lg text-brand-text-light">
+                Over the years, Pixel Interiors has successfully completed several large-scale interior projects across Tamil Nadu, earning the trust and appreciation of our valued customers.
+
+                As part of our continued growth and commitment to serving our customers better, we are pleased to announce our upcoming Mega Display Showroom in Palani. In addition, our new establishment in Udumalpet is scheduled to commence operations in November.
+
+                These new developments mark an important milestone in our journey, enabling us to showcase our interior solutions, offer a better customer experience, and bring our products and services closer to our customers across Tamil Nadu.
+
+                We sincerely thank all our customers for their continued trust and support as we move forward with this exciting new chapter.
+
+                Pixel Interiors – Growing Together, Creating Better Spaces.
+              </p>
+
+            </div>
         </Container>
       </section>
 
