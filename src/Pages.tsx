@@ -80,7 +80,7 @@ At Pixel Interiors, we understand that every project represents a dream, an inve
       <section className="bg-brand-cream py-32 lg:py-40">
         <Container className="flex flex-col gap-16 lg:gap-20">
           <Reveal>
-            <div className="max-w-2xl">
+            <div className="max-w-none">
               <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-green-900 mb-6">
               Beautiful Interiors Within Your Budge
               </h2>
