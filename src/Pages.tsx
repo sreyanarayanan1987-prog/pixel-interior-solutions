@@ -52,7 +52,8 @@ export function About() {
                   Who We Are
                 </h2>
                 <p className="text-lg leading-relaxed text-brand-text-light mb-6">
-                  We are a team of designers and craftspeople dedicated to creating interior spaces that people love living in. Based in Nalleppully, Palakkad, we work across residential and commercial projectsâ€”from modular kitchens and custom wardrobes to full turnkey homes.
+                  Pixel Interiors – Transforming Dreams into Beautiful Spaces
+Founded in 2022 in Nalleppilly, Palakkad, Pixel Interiors began its journey on a small scale with a strong vision to transform ordinary spaces into beautiful and functional living environments. Today, we are proud to be growing across Kerala and Tamil Nadu, delivering innovative interior solutions that reflect our commitment to quality, creativity, and customer satisfaction
                 </p>
                 <p className="text-lg leading-relaxed text-brand-text-light">
                   Every project is an opportunity to transform a space into something meaningful. We approach each with the same rigor, creativity, and attention to detailâ€”regardless of size or budget.
