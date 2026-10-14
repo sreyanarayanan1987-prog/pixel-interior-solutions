@@ -99,17 +99,7 @@ Our primary responsibility is to understand your requirements, respect your budg
                   <span className="text-lg leading-relaxed text-brand-ink">{value}</span>
                 </div>
               </Reveal>
-      <Reveal>
-            <div className="max-w-2xl">
-              <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-green-900 mb-6">
-              Beautiful Interiors Within Your Budge
-              </h2>
-              <p className="text-lg text-brand-text-light">
-                Building and beautifying a home is a dream cherished by every family. However, budget limitations and practical challenges can sometimes make that dream difficult to achieve. At Pixel Interiors, we believe that everyone deserves a beautiful home within their budget.
-Our primary responsibility is to understand your requirements, respect your budget, and provide the best possible interior solutions without compromising on quality, beauty, or functionality. We strive to transform your imagination into reality through thoughtful planning, creative ideas, and cost-effective solutions.
-              </p>
-            </div>
-          </Reveal>
+      
             ))}
           </div>
         </Container>
