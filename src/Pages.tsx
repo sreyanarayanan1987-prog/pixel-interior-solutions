@@ -86,27 +86,28 @@ At Pixel Interiors, we understand that every project represents a dream, an inve
               </h2>
               <p className="text-lg text-brand-text-light">
                 Building and beautifying a home is a dream cherished by every family. However, budget limitations and practical challenges can sometimes make that dream difficult to achieve. At Pixel Interiors, we believe that everyone deserves a beautiful home within their budget.
-Our primary responsibility is to understand your requirements, respect your budget, and provide the best possible interior solutions without compromising on quality, beauty, or functionality. We strive to transform your imagination into reality through thoughtful planning, creative ideas, and cost-effective solutions.
-                
+                Our primary responsibility is to understand your requirements, respect your budget, and provide the best possible interior solutions without compromising on quality, beauty, or functionality. We strive to transform your imagination into reality through thoughtful planning, creative ideas, and cost-effective solutions.  
               </p>
               <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-green-900 mb-6">
               Our Services
               </h2>
               <p className="text-lg text-brand-text-light">
 We offer a comprehensive range of interior solutions for residential and commercial spaces, tailored to suit your lifestyle, preferences, and budget.
+<ul>
+  Our major services include:
 
-Our major services include:
+<li>- Bedroom Wardrobes</li>
+  <li>- Bedroom Furniture Sets</li>
+  <li>- TV Units and Stands</li>
+  <li>- Pooja Units</li>
+  <li>- Loft Works</li>
+  <li>- Kitchen Base Units and Wall-Mounted Units</li>
+  <li>- Kitchen Accessories and Fittings</li>
+  <li>- Office Interiors</li>
+  <li>- Reception Tables and Counters</li>
 
-- Modular Kitchens
-- Bedroom Wardrobes
-- Bedroom Furniture Sets
-- TV Units and Stands
-- Pooja Units
-- Loft Works
-- Kitchen Base Units and Wall-Mounted Units
-- Kitchen Accessories and Fittings
-- Office Interiors
-- Reception Tables and Counters
+</ul>
+
 
 From modern kitchens and elegant bedrooms to functional office spaces, we focus on creating interiors that combine style, comfort, durability, and practicality.
 
@@ -120,14 +121,14 @@ Our team is committed to bringing fresh ideas and contemporary concepts into eve
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-green-900 mb-6">
              Why Choose Pixel Interiors?
             </h2>
-                
-- Experience and Growth: Growing steadily since 2022 across Kerala and Tamil Nadu.
-- Dedicated Team: More than 40 committed professionals working towards your satisfaction.
-- On-Time Completion: A strong commitment to completing projects within the promised deadlines.
-- Budget-Friendly Solutions: Beautiful and practical interiors designed around your budget.
-- Modern Designs: Innovative concepts, contemporary styles, and the latest technologies.
-- Customer Satisfaction: Your ideas, requirements, and satisfaction are at the heart of everything we do.
-
+  <ul>             
+<li>- Experience and Growth: Growing steadily since 2022 across Kerala and Tamil Nadu.</li>
+<li>- Dedicated Team: More than 40 committed professionals working towards your satisfaction.</li>
+<li>- On-Time Completion: A strong commitment to completing projects within the promised deadlines.</li>
+<li>- Budget-Friendly Solutions: Beautiful and practical interiors designed around your budget.</li>
+<li>- Modern Designs: Innovative concepts, contemporary styles, and the latest technologies.</li>
+<li>- Customer Satisfaction: Your ideas, requirements, and satisfaction are at the heart of everything we do.</li>
+</ul> 
 Your Vision, Our Commitment
 
 At Pixel Interiors, we do more than create interiors — we help bring your dreams to life. Whether you are planning a new home, upgrading your existing space, or designing a modern office, we are here to guide you at every step.
