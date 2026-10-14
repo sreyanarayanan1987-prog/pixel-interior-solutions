@@ -87,6 +87,54 @@ At Pixel Interiors, we understand that every project represents a dream, an inve
               <p className="text-lg text-brand-text-light">
                 Building and beautifying a home is a dream cherished by every family. However, budget limitations and practical challenges can sometimes make that dream difficult to achieve. At Pixel Interiors, we believe that everyone deserves a beautiful home within their budget.
 Our primary responsibility is to understand your requirements, respect your budget, and provide the best possible interior solutions without compromising on quality, beauty, or functionality. We strive to transform your imagination into reality through thoughtful planning, creative ideas, and cost-effective solutions.
+                
+              </p>
+              <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-green-900 mb-6">
+              Our Services
+              </h2>
+              <p className="text-lg text-brand-text-light">
+We offer a comprehensive range of interior solutions for residential and commercial spaces, tailored to suit your lifestyle, preferences, and budget.
+
+Our major services include:
+
+- Modular Kitchens
+- Bedroom Wardrobes
+- Bedroom Furniture Sets
+- TV Units and Stands
+- Pooja Units
+- Loft Works
+- Kitchen Base Units and Wall-Mounted Units
+- Kitchen Accessories and Fittings
+- Office Interiors
+- Reception Tables and Counters
+
+From modern kitchens and elegant bedrooms to functional office spaces, we focus on creating interiors that combine style, comfort, durability, and practicality.
+
+Innovation and Modern Technology
+
+The interior industry is constantly evolving, and at Pixel Interiors, we believe in staying ahead of the curve. We continuously update our knowledge, embrace the latest design trends, explore modern materials, and adopt advanced technologies to deliver innovative interior solutions.
+
+Our team is committed to bringing fresh ideas and contemporary concepts into every project. By combining creativity, technical expertise, and modern techniques, we aim to provide interior solutions that meet today's standards and tomorrow's expectations.
+            
+                
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-green-900 mb-6">
+             Why Choose Pixel Interiors?
+            </h2>
+                
+- Experience and Growth: Growing steadily since 2022 across Kerala and Tamil Nadu.
+- Dedicated Team: More than 40 committed professionals working towards your satisfaction.
+- On-Time Completion: A strong commitment to completing projects within the promised deadlines.
+- Budget-Friendly Solutions: Beautiful and practical interiors designed around your budget.
+- Modern Designs: Innovative concepts, contemporary styles, and the latest technologies.
+- Customer Satisfaction: Your ideas, requirements, and satisfaction are at the heart of everything we do.
+
+Your Vision, Our Commitment
+
+At Pixel Interiors, we do more than create interiors — we help bring your dreams to life. Whether you are planning a new home, upgrading your existing space, or designing a modern office, we are here to guide you at every step.
+
+Let us transform your ideas into spaces that inspire, comfort, and impress.
+
+Pixel Interiors – Your Dreams. Our Design. Our Commitment.
               </p>
             </div>
           </Reveal>
