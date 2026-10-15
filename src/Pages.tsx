@@ -82,7 +82,7 @@ At Pixel Interiors, we understand that every project represents a dream, an inve
           <Reveal>
             <div className="max-w-none">
               <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-green-900 mb-6">
-              Beautiful Interiors Within Your Budge
+              Beautiful Interiors Within Your Budget
               </h2>
               <p className="text-lg text-brand-text-light">
                 Building and beautifying a home is a dream cherished by every family. However, budget limitations and practical challenges can sometimes make that dream difficult to achieve. At Pixel Interiors, we believe that everyone deserves a beautiful home within their budget.
