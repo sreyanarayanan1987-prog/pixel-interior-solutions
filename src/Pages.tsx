@@ -273,7 +273,7 @@ export function Contact() {
               </ul>
 
               <div className="pt-4 border-t border-white/20">
-                <p className="text-sm text-white/60 mb-4">Hours: Mon â€“ Sat, 9:30 AM â€“ 6:30 PM</p>
+                <p className="text-sm text-white/60 mb-4">Hours: Mon to Sat, 9:30 AM to 6:30 PM</p>
                 <a
                   href={contactInfo.whatsappUrl}
                   target="_blank"
