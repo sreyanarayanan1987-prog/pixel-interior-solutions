@@ -618,7 +618,7 @@ export function Footer() {
       {/* Footer bottom */}
       <div className="border-t border-white/10 py-8">
         <Container className="flex flex-col items-center justify-between gap-3 text-xs text-white/50 sm:flex-row">
-          <p>Â© {new Date().getFullYear()} {contactInfo.brandName}. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {contactInfo.brandName}. All rights reserved.</p>
           <p>{contactInfo.website}</p>
         </Container>
       </div>
