@@ -180,7 +180,7 @@ export const galleryItems: GalleryItem[] = [
   { id: "w4", title: "Wardrobe Interior", category: "Wardrobes", image: "/images/wardrobes/w4.jpg" },
   { id: "w5", title: "Wardrobe Interior", category: "Wardrobes", image: "/images/wardrobes/w5.jpeg" },
   { id: "w6", title: "Wardrobe Interior", category: "Wardrobes", image: "/images/wardrobes/w6.jpeg" },
-  { id: "g5", title: "Work, Considered", category: "Commercial", image: "/images/gallery-05.jpg" },
+  
 ];
 
 // Questions and answers shown on the services page.
