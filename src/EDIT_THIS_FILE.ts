@@ -112,28 +112,42 @@ export const processSteps: ProcessStep[] = [
   },
 ];
 
-// Replace these with real client testimonials when available.
+// These are sample testimonials for layout preview. Replace with genuine reviews before launch.
 export const testimonials: Testimonial[] = [
   {
-    id: "t1",
-    name: "Client Name",
+    id: "sample-1",
+    name: "Ananya Menon",
     quote:
-      "Placeholder testimonial — swap this for a real client quote before launch.",
-    source: "Google",
+      "The team helped us make the most of our living room and created a calm, welcoming space for our family.",
+    source: "google",
   },
   {
-    id: "t2",
-    name: "Client Name",
+    id: "sample-2",
+    name: "Rahul Nair",
     quote:
-      "Placeholder testimonial — swap this for a real client quote before launch.",
-    source: "Google",
+      "Our new kitchen is thoughtfully planned, with practical storage and a clean, modern finish.",
+    source: "google",
   },
   {
-    id: "t3",
-    name: "Client Name",
+    id: "sample-3",
+    name: "Meera Krishnan",
     quote:
-      "Placeholder testimonial — swap this for a real client quote before launch.",
-    source: "Google",
+      "Communication was clear throughout the project, and the finished bedroom feels comfortable and beautifully organised.",
+    source: "instagram",
+  },
+  {
+    id: "sample-4",
+    name: "Arjun Kumar",
+    quote:
+      "They listened to our needs and designed wardrobes that fit our space while giving us plenty of useful storage.",
+    source: "instagram",
+  },
+  {
+    id: "sample-5",
+    name: "Diya Thomas",
+    quote:
+      "We appreciated the thoughtful design suggestions and attention to detail from the first discussion to installation.",
+    source: "facebook",
   },
 ];
 
