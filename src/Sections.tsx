@@ -213,7 +213,7 @@ export function CustomerReviewSection() {
                       aria-hidden="true"
                       className={`h-7 w-7 transition-colors ${
                         value <= (hoveredRating || rating)
-                          ? "fill-brand-gold-500 text-brand-gold-600"
+                          ? "fill-yellow-400 text-yellow-500"
                           : "text-neutral-300"
                       }`}
                     />
