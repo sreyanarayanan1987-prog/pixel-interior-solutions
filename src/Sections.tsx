@@ -1,17 +1,16 @@
-﻿/* Sections used by the home page and contact page. */
+/* Sections used by the home page and contact page. */
 import { motion } from "framer-motion";
-import { ArrowDownRight, ArrowUpRight, Send } from "lucide-react";
-import { useState } from "react";
+import { ArrowDownRight, ArrowUpRight, Send, Star } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { galleryItems, processSteps, services } from "./EDIT_THIS_FILE";
+import { contactInfo, galleryItems, processSteps, services, testimonials } from "./EDIT_THIS_FILE";
 import { Button, Container, KineticTitle, Reveal } from "./Components";
 
 // ===== ContactForm.tsx =====
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-// Sign up at https://formspree.io, create a form, and set its endpoint ID
-// here (or via the VITE_FORMSPREE_ENDPOINT env var). No custom backend needed.
+// Keep the separate contact form's existing Formspree integration unchanged.
 const FORMSPREE_ENDPOINT =
   import.meta.env.VITE_FORMSPREE_ENDPOINT || "YOUR_FORMSPREE_FORM_ID";
 
@@ -126,6 +125,127 @@ export function ContactForm() {
         </p>
       )}
     </form>
+  );
+}
+
+export function CustomerReviewSection() {
+  const [rating, setRating] = useState(0);
+  const [hoveredRating, setHoveredRating] = useState(0);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("name") ?? "").trim();
+    const review = String(formData.get("review") ?? "").trim();
+    const selectedRating = Number(formData.get("rating"));
+    const phone = contactInfo.phone.replace(/\D/g, "");
+    const message = [
+      `Customer review for ${contactInfo.brandName}`,
+      `Name: ${name}`,
+      `Rating: ${selectedRating}/5`,
+      `Review: ${review}`,
+    ].join("\n");
+
+    window.location.assign(
+      `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
+    );
+  };
+
+  return (
+    <section className="bg-brand-cream py-24 sm:py-32 lg:py-40">
+      <Container className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="flex flex-col gap-6">
+          <Reveal>
+            <p className="editorial-label text-brand-ink/55">Share your experience</p>
+            <h2 className="mt-5 font-display text-4xl font-semibold text-brand-green-900 sm:text-5xl">
+              Your feedback means a lot.
+            </h2>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-brand-text-light">
+              Tell us about your experience. We’ll open WhatsApp with your review
+              ready to send to our team.
+            </p>
+          </Reveal>
+        </div>
+
+        <Reveal delay={0.1}>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5 rounded-lg bg-white p-6 sm:p-8">
+            <div className="flex flex-col gap-2">
+              <label htmlFor="review-name" className="text-sm font-medium text-brand-green-900">
+                Your name
+              </label>
+              <input
+                id="review-name"
+                name="name"
+                required
+                maxLength={100}
+                autoComplete="name"
+                placeholder="Your name"
+                className="rounded-lg border border-brand-cream-dark bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-brand-gold-500"
+              />
+            </div>
+
+            <fieldset className="flex flex-col gap-2">
+              <legend className="text-sm font-medium text-brand-green-900">Your rating</legend>
+              <div
+                role="radiogroup"
+                aria-label="Choose a star rating"
+                className="flex w-fit gap-1"
+                onMouseLeave={() => setHoveredRating(0)}
+              >
+                {[1, 2, 3, 4, 5].map((value) => (
+                  <label
+                    key={value}
+                    className="cursor-pointer rounded-sm p-1 focus-within:outline focus-within:outline-2 focus-within:outline-brand-gold-600"
+                    onMouseEnter={() => setHoveredRating(value)}
+                  >
+                    <input
+                      className="sr-only"
+                      type="radio"
+                      name="rating"
+                      value={value}
+                      required
+                      checked={rating === value}
+                      onChange={() => setRating(value)}
+                      aria-label={`${value} ${value === 1 ? "star" : "stars"}`}
+                    />
+                    <Star
+                      aria-hidden="true"
+                      className={`h-7 w-7 transition-colors ${
+                        value <= (hoveredRating || rating)
+                          ? "fill-brand-gold-500 text-brand-gold-600"
+                          : "text-neutral-300"
+                      }`}
+                    />
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+
+            <div className="flex flex-col gap-2">
+              <label htmlFor="review-message" className="text-sm font-medium text-brand-green-900">
+                Your review
+              </label>
+              <textarea
+                id="review-message"
+                name="review"
+                required
+                minLength={5}
+                maxLength={2000}
+                rows={5}
+                placeholder="Share a few words about your experience..."
+                className="resize-y rounded-lg border border-brand-cream-dark bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-brand-gold-500"
+              />
+            </div>
+
+            <Button type="submit" variant="primary">
+              Continue to WhatsApp
+              <Send className="h-4 w-4" />
+            </Button>
+          </form>
+        </Reveal>
+      </Container>
+    </section>
   );
 }
 
@@ -305,15 +425,172 @@ export function Services() {
 
 // ===== Testimonials.tsx =====
 
-export function Testimonials() {
+const isPlaceholderTestimonial = (quote: string, name: string) => {
+  const normalizedQuote = quote.toLowerCase();
   return (
-    <section className="bg-brand-cream py-24 sm:py-32 lg:py-40">
+    name.toLowerCase() === "client name" ||
+    normalizedQuote.includes("placeholder testimonial") ||
+    normalizedQuote.includes("swap this for a real client quote")
+  );
+};
+
+export function Testimonials() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+
+  const visibleTestimonials = testimonials.filter(
+    (testimonial) => !isPlaceholderTestimonial(testimonial.quote, testimonial.name)
+  ).map((testimonial) => ({ ...testimonial, rating: 5 }));
+
+  useEffect(() => {
+    if (visibleTestimonials.length < 2 || paused) {
+      return;
+    }
+
+    const timer = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % visibleTestimonials.length);
+    }, 3200);
+
+    return () => window.clearInterval(timer);
+  }, [paused, visibleTestimonials.length]);
+
+  useEffect(() => {
+    if (!trackRef.current) {
+      return;
+    }
+
+    const cardWidth = trackRef.current.firstElementChild?.getBoundingClientRect().width ?? 360;
+    const gap = 20;
+    trackRef.current.scrollTo({
+      left: activeIndex * (cardWidth + gap),
+      behavior: "smooth",
+    });
+  }, [activeIndex, visibleTestimonials.length]);
+
+  if (visibleTestimonials.length === 0) {
+    return null;
+  }
+
+  const showPrevious = () => {
+    setPaused(true);
+    setActiveIndex((current) => (current - 1 + visibleTestimonials.length) % visibleTestimonials.length);
+  };
+
+  const showNext = () => {
+    setPaused(true);
+    setActiveIndex((current) => (current + 1) % visibleTestimonials.length);
+  };
+
+  return (
+    <section
+      className="bg-brand-cream py-24 sm:py-32 lg:py-40"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+    >
       <Container>
-        <Reveal><p className="editorial-label text-brand-ink/55">04 / The feeling</p></Reveal>
-        <Reveal delay={.08} className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
-          <blockquote className="max-w-5xl text-4xl leading-[.96] sm:text-5xl lg:col-span-9 lg:text-7xl">The best interiors do not ask for attention. They make the everyday feel considered.</blockquote>
-          <p className="editorial-label border-t border-brand-ink/25 pt-4 text-brand-ink/55 lg:col-span-3">Pixel approach<br />to lasting spaces</p>
+        <Reveal>
+          <p className="editorial-label text-brand-ink/55">04 / The feeling</p>
         </Reveal>
+
+        <Reveal delay={.08} className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
+          <blockquote className="max-w-5xl text-4xl leading-[.96] sm:text-5xl lg:col-span-9 lg:text-7xl">
+            The best interiors do not ask for attention. They make the everyday feel considered.
+          </blockquote>
+
+          <div className="flex items-center justify-between gap-3 border-t border-brand-ink/25 pt-4 lg:col-span-3">
+            <p className="editorial-label text-brand-ink/55">Pixel approach<br />to lasting spaces</p>
+            {visibleTestimonials.length > 0 && (
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  aria-label="Show previous testimonial"
+                  onClick={showPrevious}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-brand-ink/20 bg-white text-brand-ink transition hover:bg-brand-cream"
+                >
+                  ←
+                </button>
+                <button
+                  type="button"
+                  aria-label="Show next testimonial"
+                  onClick={showNext}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-brand-ink/20 bg-white text-brand-ink transition hover:bg-brand-cream"
+                >
+                  →
+                </button>
+              </div>
+            )}
+          </div>
+        </Reveal>
+
+        <div className="mt-12 overflow-hidden">
+          <div
+            ref={trackRef}
+            className="flex gap-5 overflow-x-auto pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {visibleTestimonials.map((testimonial, index) => {
+              const isActive = index === activeIndex;
+
+              return (
+                <button
+                  key={testimonial.id}
+                  type="button"
+                  onClick={() => {
+                    setPaused(true);
+                    setActiveIndex(index);
+                  }}
+                  className="group w-[min(82vw,320px)] shrink-0 text-left transition-all duration-300 sm:w-[300px] lg:w-[320px]"
+                >
+                  <article
+                    className={`flex h-full min-h-[260px] flex-col justify-between rounded-[28px] border p-6 shadow-[0_14px_40px_rgba(15,32,26,0.06)] transition-all duration-300 sm:p-7 ${
+                      isActive
+                        ? "border-brand-ink/15 bg-white shadow-[0_18px_50px_rgba(15,32,26,0.12)]"
+                        : "border-brand-ink/10 bg-[#f8f5f2] opacity-80"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex gap-1 text-brand-gold-500">
+                        {[...Array(5)].map((_, starIndex) => (
+                          <Star
+                            key={`${testimonial.id}-star-${starIndex}`}
+                            className={`h-4 w-4 ${starIndex < testimonial.rating ? "fill-current" : ""}`}
+                          />
+                        ))}
+                      </div>
+
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-gold-100 text-lg text-brand-gold-600">
+                        “
+                      </span>
+                    </div>
+
+                    <p className="mt-5 text-lg leading-relaxed text-brand-text-light sm:text-xl">
+                      {testimonial.quote}
+                    </p>
+
+                    <div className="mt-6 flex items-center gap-3 border-t border-brand-ink/10 pt-4">
+                      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-brand-gold-200 to-brand-green-200 text-sm font-semibold text-brand-green-900">
+                        {testimonial.name
+                          .split(" ")
+                          .map((part) => part[0])
+                          .slice(0, 2)
+                          .join("")}
+                      </span>
+
+                      <div>
+                        <p className="font-semibold text-brand-green-900">{testimonial.name}</p>
+                        {testimonial.source && (
+                          <p className="text-sm text-brand-ink/55">{testimonial.source}</p>
+                        )}
+                      </div>
+                    </div>
+                  </article>
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </Container>
     </section>
   );
