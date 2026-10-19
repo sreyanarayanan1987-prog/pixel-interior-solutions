@@ -4,7 +4,14 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { contactInfo, galleryItems, services } from "./EDIT_THIS_FILE";
 import { Container, PageHeader, Reveal, ServiceIcon } from "./Components";
-import { CTASection, ContactForm, Hero, ProcessSteps, Testimonials } from "./Sections";
+import {
+  CTASection,
+  ContactForm,
+  CustomerReviewSection,
+  Hero,
+  ProcessSteps,
+  Testimonials,
+} from "./Sections";
 
 // ===== About.tsx =====
 
@@ -82,7 +89,7 @@ At Pixel Interiors, we understand that every project represents a dream, an inve
           <Reveal>
             <div className="max-w-none">
               <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-green-900 mb-6">
-              Beautiful Interiors Within Your Budget
+              Beautiful Interiors Within Your Budge
               </h2>
               <p className="text-lg text-brand-text-light">
                 Building and beautifying a home is a dream cherished by every family. However, budget limitations and practical challenges can sometimes make that dream difficult to achieve. At Pixel Interiors, we believe that everyone deserves a beautiful home within their budget.
@@ -208,6 +215,7 @@ At Pixel Interiors, we understand that every project represents a dream, an inve
       </section>
 
       <CTASection />
+      <CustomerReviewSection />
     </>
   );
 }
@@ -273,7 +281,7 @@ export function Contact() {
               </ul>
 
               <div className="pt-4 border-t border-white/20">
-                <p className="text-sm text-white/60 mb-4">Hours: Mon to Sat, 9:30 AM to 6:30 PM</p>
+                <p className="text-sm text-white/60 mb-4">Hours: Mon to Sat, 9:30 AM  6:30 PM</p>
                 <a
                   href={contactInfo.whatsappUrl}
                   target="_blank"
@@ -534,4 +542,3 @@ export function ServicesPage() {
     </>
   );
 }
-
