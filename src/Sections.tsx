@@ -551,7 +551,7 @@ export function Testimonials() {
                     }`}
                   >
                     <div className="flex items-center justify-between">
-                      <div className="flex gap-1 text-brand-yellow-500">
+                      <div className="flex gap-1 text-yellow-500">
                         {[...Array(5)].map((_, starIndex) => (
                           <Star
                             key={`${testimonial.id}-star-${starIndex}`}
